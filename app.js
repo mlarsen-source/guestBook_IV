@@ -97,8 +97,8 @@ app.post('/confirm',  async (req, res) =>
   // create contact object with form data from request body
   const contact = 
   {
-    lname: req.body.lname,
     fname: req.body.fname,
+    lname: req.body.lname,
     title: req.body.title,
     company: req.body.company,
     linkedIn: req.body.linkedIn,
