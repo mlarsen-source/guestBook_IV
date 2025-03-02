@@ -1,0 +1,58 @@
+/*
+
+Author: Matthew Larsen
+Date: 03/01/2025
+Portfolio Project: Guestbook Part IV
+Filename: admin.css
+File Description: CSS for Guest List (admin) page
+
+*/
+main 
+{
+  width: auto; 
+}
+
+nav
+{
+  margin-bottom: 2rem;
+}
+
+h2 
+{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#guests 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+table 
+{
+  width: 100%;
+  border-collapse: collapse; 
+  border: 0.1rem solid #cecece;
+  text-align: left;
+  font-size: smaller;
+}
+
+th, td 
+{
+  border: 0.1rem solid #cecece;
+  padding: 0.5rem; 
+}
+
+th 
+{
+  background-color: #f4f4f4; 
+  font-weight: bold;
+}
+
+tr:nth-child(even) 
+{
+  background-color: #f9f9f9; 
+}

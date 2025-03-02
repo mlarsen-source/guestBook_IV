@@ -1,0 +1,60 @@
+<!--
+
+Author: Matthew Larsen
+Date: 03/01/2025
+Portfolio Project: Guestbook Part IV
+Filename: confirm.ejs
+File Description: HTML & EJS code for Confirmation page
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/default.css">
+  <link rel="stylesheet" href="/css/confirm.css">
+  <link rel="icon" type="image/png" href="/images/confirm.png" />
+  <title>Confirmation Page</title>
+</head>
+<body>
+  <main>
+    <nav>
+      <ul id="navList">
+        <li><a href='/'>Guest Book</a></li>
+        <li><a href='admin'>Guest List</a></li>
+      </ul>
+    </nav>
+    <div id="confirm">
+      <h2>Thank you!</h2>
+      <p> The following information was submitted successfully: </p>
+      <ul id="row1">
+        <li><label>First Name: </label><%= contact.fname %></li>
+        <li><label>Last Name: </label> <%= contact.lname %></li>
+        <li><label>Job Title: </label> <%= contact.title %></li>
+      </ul>
+      <ul id="row2">
+        <li><label>Company: </label> <%= contact.company%></li>
+        <li><label>LinkedIn: </label> <%= contact.linkedIn %></li>
+        <li><label>Email: </label> <%= contact.email %></li>
+      </ul>
+      <ul id="row3">
+        <li><label>How we met: </label> <%= contact.meet %></li>
+        <li><label>Other: </label> <%= contact.other %></li>
+        <li></li>
+      </ul>
+      <div id="bottom">
+        <ul id="row4">
+          <li><label>Add to mailing list: </label> <%= contact.mailList %></li>
+          <li><label>Email Format: </label><%= contact.format %></li>
+          <li id="message"><label>Message: </label></li>
+          <li id="messageBody"> <%= contact.message %></li>
+        </ul>
+        <img src="/images/check.png" alt="check mark">
+      </div>
+    </div>
+  </main>  
+</body>
+</html>

@@ -1,0 +1,92 @@
+/*
+
+Author: Matthew Larsen
+Date: 03/01/2025
+Portfolio Project: Guestbook Part IV
+Filename: confirm.css
+File Description: CSS for Confirmation page
+
+*/
+
+#confirm
+{
+  height:26rem;
+  padding-top: 1.5rem;
+}
+
+h2
+{
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+p
+{
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+label
+{
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+#confirm ul
+{
+  word-wrap: break-word;
+  list-style-type: none;
+  padding: 0;
+  font-size:.8rem;
+  margin-bottom: 1rem;
+}
+
+#row1, #row2, #row3
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#row1 li, #row2 li, #row3 li
+{
+  width:33%;
+}
+
+#bottom
+{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#row4
+{
+  margin: 0;
+}
+
+#row4 #message
+{
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+}
+
+#row4 #messageBody
+{
+  width: 60%;
+}
+
+#row4 li
+{
+  margin-bottom: 1rem;
+}
+
+img
+{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 9rem;
+}

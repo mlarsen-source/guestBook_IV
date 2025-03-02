@@ -1,0 +1,69 @@
+/*
+
+Author: Matthew Larsen
+Date: 03/01/2025
+Portfolio Project: Guestbook Part IV
+Filename: default.css
+File Description: Default CSS for all guestbook pages
+
+*/
+
+
+body
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:#f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+}
+
+main
+{
+  background-color: #ffffff;
+  height:30rem;
+  width: 40rem;
+  box-shadow: 1px 1px 2px 2px #d3d3d3;
+  border-radius: .2rem;
+  padding: 1rem;
+  accent-color: gray;
+}
+
+#navList
+{
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  list-style-type: none;
+  padding: .6rem;
+  padding-left: 0rem;
+  border: .1rem solid #cecece;
+  box-shadow: .1rem .1rem .1rem#d3d3d3;
+  border-radius: .2rem;
+  font-size: smaller;
+  margin:0;
+}
+
+#navList a:link 
+{
+  color:  black;
+  text-decoration: none;
+  padding: .6rem;
+}
+
+#navList a:visited
+{
+  color:  black;
+  text-decoration: none;
+}
+
+#navList a:hover {
+  color:  black;
+  background-color: #e4e4e4;
+}
+
+#navList a:active
+{
+  background-color: #9d9d9d;
+}

@@ -1,0 +1,70 @@
+<!--
+
+Author: Matthew Larsen
+Date: 03/01/2025
+Portfolio Project: Guestbook Part IV
+Filename: home.ejs
+File Description: HTML & EJS code for Home page
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/default.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="icon" type="image/png" href="/images/icon.png" />
+  <title>Guest Book</title>
+</head>
+<body>
+  <main>
+    <nav>
+      <ul id="navList">
+        <li><a href='/'>Guest Book</a></li>
+        <li><a href='admin'>Guest List</a></li>
+      </ul>
+    </nav>
+    <form id="form" action="confirm" method="post" >
+      <h1>Contact Form</h1>
+      <div class="rows">
+        <label>First Name<input type="text" id="fname" name="fname"></label>
+        <label>Last Name<input type="text" id="lname" name="lname"></label>
+        <label>Job Title<input type="text" id="title" name="title"></label>
+      </div>
+      <div class="rows">
+        <label>Company<input type="text" id="company" name="company"></label>
+        <label>LinkedIn URL<input type="text" id="linkedIn" name="linkedIn"></label>
+        <label>Email Address<input type="text" id="email" name="email"></label>
+      </div>
+      <div class="rows">
+        <label>How did we meet?
+          <select id="meet" name="meet" title="Please make a selection"> 
+            <option value="none">Please select</option>
+            <option value="School">School</option>
+            <option value="Work">Work</option>
+            <option value="Online">Online</option>
+            <option value="Job Fair">Job Fair</option>
+            <option value="Social Event">Social Event</option>
+          </select>
+        </label>
+        <label>Other (please specify)<input type="text" id="other" name="other"></label>
+      </div>
+    <div>
+        <label>Message
+          <textarea id="message" name="message" rows="5" cols="100"></textarea>
+        </label>
+      </div>
+      <div>
+        <label><input class=inline type="checkbox" name="mailList" value="Yes">Please add me to your mailing list</label>
+        <label class="inline">Choose an email format: </label>
+        <label class="inline"><input class="inline" type="radio" name="format" value="HTML">HTML</label>
+        <label class="inline"><input class="inline" type="radio" name="format" value="Text">Text</label><br>
+        <input id="button" type="submit" value="Submit">         
+      </div>
+    </form>
+  </main>
+</body>
+</html>
