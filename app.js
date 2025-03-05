@@ -15,7 +15,6 @@ import mariadb from 'mariadb';
 import { validateForm } from './services/validation.js';
 import dotenv from 'dotenv';
 
-
 dotenv.config();
 
 // define our database credentials
@@ -26,7 +25,6 @@ const pool = mariadb.createPool({
     database: process.env.DB_NAME,
     port: process.env.DB_PORT
 });
-
 
 // define function to connect to the DB
 async function connect() {
@@ -42,12 +40,8 @@ async function connect() {
 // instantiate an express application
 const app = express();
 
-
-
 // instantiate an array to store form submissions
 const contactList = [];
-
-
 
 // handling form submission for data sent in the URL-encoded format
 app.use(express.urlencoded({extended: true}));
@@ -62,16 +56,12 @@ app.use(express.static('public'));
 const PORT = process.env.APP_PORT || 3000;
 
 
-
-
-
 // define default route for contact form home page
 app.get('/',(req, res)=>{
   
   // send home page as a response to the client
   res.render('home');
 });
-
 
 
 // define an admin route to view all contacts stored in database
@@ -87,7 +77,6 @@ app.get('/admin', async (req, res) => {
 
   res.render('admin', { contacts });
 });
-
 
 
 // define a confirm route to handle contact form submission
@@ -106,7 +95,7 @@ app.post('/confirm',  async (req, res) =>
     meet: req.body.meet,
     other: req.body.other,
     message: req.body.message,
-    mailList: req.body.mailList,
+    mailList: req.body.mailList || "No",
     format: req.body.format,
   };
 
@@ -121,16 +110,14 @@ app.post('/confirm',  async (req, res) =>
   // connect to the database
   const conn = await connect();
 
-
   // add the contact to our database
   const insertQuery = await conn.query(`INSERT INTO contacts (fname, lname, title, company, linkedIn, email, meet, other, message, mailList, format)
-    VALUES (?,?,?,?,?,?,?,?,?,?,?)`,[contact.lname, contact.fname, contact.title, contact.company, contact.linkedIn, contact.email, contact.meet, contact.other, contact.message, contact.mailList, contact.format]);
+    VALUES (?,?,?,?,?,?,?,?,?,?,?)`,[contact.fname, contact.lname, contact.title, contact.company, contact.linkedIn, contact.email, contact.meet, contact.other, contact.message, contact.mailList, contact.format]);
       
   // send confirmation page to user
   res.render('confirm', { contact });
   
 });
-
 
 
 // tell the server to listen on port 3000
